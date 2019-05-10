@@ -86,15 +86,15 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="logstash 介绍Logstash是一个具有实时管道功能的开源数据收集引擎，Logstash可以动态地将来自不同数据源的数据统一起来，并将数据规范化为你选择的目的地，清理和大众化你的所有数据，用于各种高级下游分析和可视化用例。 虽然Logstash最初推动了日志收集方面的创新，但是它的功能远远超出了这个用例，任何类型的事件都可以通过大量的输入、过滤器和输出插件来丰富和转换，使用许多原生编解码可">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/山石Hillstone-Logstash配置流程/images/日志管理-1.png">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/山石Hillstone-Logstash配置流程/images/会话日志-2.png">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/山石Hillstone-Logstash配置流程/images/会话日志-3.png">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/山石Hillstone-Logstash配置流程/images/GROK-3.png">
-<meta property="og:updated_time" content="2019-05-10T03:56:06.002Z">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/0060lm7Tly1g2wasdo64oj30wv0q1go1.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/0060lm7Tly1g2wasdnep6j30jh0cu3z8.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/0060lm7Tly1g2wasdnih6j30y107xwft.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g2wasea46bj30u10pyadw.jpg">
+<meta property="og:updated_time" content="2019-05-10T08:26:17.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="山石Hillstone Logstash 配置流程">
 <meta name="twitter:description" content="logstash 介绍Logstash是一个具有实时管道功能的开源数据收集引擎，Logstash可以动态地将来自不同数据源的数据统一起来，并将数据规范化为你选择的目的地，清理和大众化你的所有数据，用于各种高级下游分析和可视化用例。 虽然Logstash最初推动了日志收集方面的创新，但是它的功能远远超出了这个用例，任何类型的事件都可以通过大量的输入、过滤器和输出插件来丰富和转换，使用许多原生编解码可">
-<meta name="twitter:image" content="http://yoursite.com/2019/05/10/山石Hillstone-Logstash配置流程/images/日志管理-1.png">
+<meta name="twitter:image" content="http://wx4.sinaimg.cn/large/0060lm7Tly1g2wasdo64oj30wv0q1go1.jpg">
 
 
 
@@ -367,8 +367,8 @@
         <h3 id="logstash-介绍"><a href="#logstash-介绍" class="headerlink" title="logstash 介绍"></a>logstash 介绍</h3><p>Logstash是一个具有实时管道功能的开源数据收集引擎，Logstash可以动态地将来自不同数据源的数据统一起来，并将数据规范化为你选择的目的地，清理和大众化你的所有数据，用于各种高级下游分析和可视化用例。</p>
 <p>虽然Logstash最初推动了日志收集方面的创新，但是它的功能远远超出了这个用例，任何类型的事件都可以通过大量的输入、过滤器和输出插件来丰富和转换，使用许多原生编解码可以进一步简化摄取过程。Logstash通过利用大量和多种数据来提高你的洞察力。</p>
 <p>简单来说，logstash 是一个很牛逼的开源数据收集引擎，并能将日志繁乱的格式字段定义为你想要的。</p>
-<h3 id="Hillstone-配置"><a href="#Hillstone-配置" class="headerlink" title="Hillstone 配置"></a>Hillstone 配置</h3><p>系统版本：Version 5.5<br>路径：监控-日志-日志管理-你想搜集的日志-日志服务器-日志分发方式-明文日志（注意一定是明文，默认为二进制日志，logstash拿到后不好处理）<br><img src="images/日志管理-1.png" alt="image"></p>
-<p>由于可选日志条目较多，我们只拿会话日志进行举例，我们勾选让会话日志先传递给logstash。<br><img src="images/会话日志-2.png" alt="image"></p>
+<h3 id="Hillstone-配置"><a href="#Hillstone-配置" class="headerlink" title="Hillstone 配置"></a>Hillstone 配置</h3><p>系统版本：Version 5.5<br>路径：监控-日志-日志管理-你想搜集的日志-日志服务器-日志分发方式-明文日志（注意一定是明文，默认为二进制日志，logstash拿到后不好处理）<br><img src="http://wx4.sinaimg.cn/large/0060lm7Tly1g2wasdo64oj30wv0q1go1.jpg" alt="image"></p>
+<p>由于可选日志条目较多，我们只拿会话日志进行举例，我们勾选让会话日志先传递给logstash。<br><img src="http://wx4.sinaimg.cn/large/0060lm7Tly1g2wasdnep6j30jh0cu3z8.jpg" alt="image"></p>
 <h3 id="Logstash配置"><a href="#Logstash配置" class="headerlink" title="Logstash配置"></a>Logstash配置</h3><ol>
 <li>新建一个test.conf</li>
 </ol>
@@ -381,13 +381,13 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost logstash-6.2.2]# ./bin/logstash -f config/test-hillstone.conf   --path.data data/hillstone-log --path.logs logs/hillstone-log</span><br></pre></td></tr></table></figure>
 <ol start="4">
-<li><p>我们可以看到，大多数日志都是这两种格式，我们先按照这种格式进行分析<br><img src="images/会话日志-3.png" alt="image"></p>
+<li><p>我们可以看到，大多数日志都是这两种格式，我们先按照这种格式进行分析<br><img src="http://wx2.sinaimg.cn/large/0060lm7Tly1g2wasdnih6j30y107xwft.jpg" alt="image"></p>
 </li>
 <li><p>利用logstash<a href="https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns" target="_blank" rel="noopener">内置的正则格式</a>进行日志分析，通过<a href="https://grokdebug.herokuapp.com/" target="_blank" rel="noopener">Grok Debugger</a>进行日志切割。（到目前的经验来看，凡是grokdebug分析不出来的，logstash肯定分析不出来，而且grokdebug速度快，效率高，建议多尝试）</p>
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">eg1:</span><br><span class="line">&lt;190&gt;May 10 11:08:48 2812242182000133(root) 44243630 Traffic@FLOW: SESSION: 10.2.20.232:53550-&gt;140.143.254.155:443(TCP), application HTTPS, interface ethernet0/1.10, vr trust-vr, policy 10, user -@-, host -, mac 0000.0000.0000, send packets 3, send bytes 176, receive packets 2, receive bytes 120, start time 2019-05-10 11:08:47, close time 2019-05-10 11:08:48, session end, Block\n\u0000</span><br><span class="line"></span><br><span class="line">\&lt;%&#123;BASE10NUM:syslog_pri&#125;\&gt;%&#123;SYSLOGTIMESTAMP:timestamp&#125;\ %&#123;BASE10NUM:serial&#125;\(%&#123;WORD:ROOT&#125;\) %&#123;DATA:logid&#125;\ %&#123;DATA:Sort&#125;@%&#123;DATA:Class&#125;\: %&#123;DATA:module&#125;\: %&#123;IPV4:srcip&#125;\:%&#123;BASE10NUM:srcport&#125;-&gt;%&#123;IPV4:dstip&#125;:%&#123;WORD:dstport&#125;\(%&#123;DATA:protocol&#125;\), application\ %&#123;DATA:app&#125;\, interface %&#123;DATA:interface&#125;\, vr %&#123;DATA:vr&#125;\, policy %&#123;DATA:policy&#125;\, user %&#123;USERNAME:user&#125;\@%&#123;DATA:AAAserver&#125;\, host %&#123;DATA:HOST&#125;\, mac %&#123;CISCOMAC:mac&#125;\, send packets %&#123;BASE10NUM:sendPackets&#125;\, send bytes %&#123;BASE10NUM:sendBytes&#125;\, receive packets %&#123;BASE10NUM:receivePackets&#125;\, receive bytes %&#123;BASE10NUM:receiveBytes&#125;\, start time %&#123;TIMESTAMP_ISO8601:startTime&#125;\, close time %&#123;TIMESTAMP_ISO8601:closeTime&#125;\, %&#123;GREEDYDATA:reason&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="images/GROK-3.png" alt="image"><br>我们将变量都定义出来，将日志定义成自己想要的，后面可以根据字段进行删减。</p>
+<p><img src="http://wx3.sinaimg.cn/large/0060lm7Tly1g2wasea46bj30u10pyadw.jpg" alt="image"><br>我们将变量都定义出来，将日志定义成自己想要的，后面可以根据字段进行删减。</p>
 <ol start="6">
 <li>好了，废话不多说，大体思路是这样。下面我将.conf配置文件贴出来，有问题可以多沟通。</li>
 </ol>
