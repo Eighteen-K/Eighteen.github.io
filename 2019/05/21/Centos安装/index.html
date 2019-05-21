@@ -79,17 +79,34 @@
 
 
 
-<meta name="description" content="Centos 7 安装记录 加载镜像，选择Install Centos Linux 7http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg  选择语言，建议选择Englishhttp://wx2.sinaimg.cn/large/0060lm7Tly1g38x7d3wsmj30l007btcf.jpg  新增swap和根分">
+<meta name="description" content="Centos 7 安装记录 加载镜像，选择Install Centos Linux 7  选择语言，建议选择English  分区、新增swap和根分区（根分区格式选择ext4）  选择最小化安装  修改密码  Reboot  进行登录    修改IP  12345678vi  /etc/sysconfig/network-scripts/ifcfg-*   BOOTPROTO=static#启用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装Centos">
 <meta property="og:url" content="http://yoursite.com/2019/05/21/Centos安装/index.html">
 <meta property="og:site_name" content="Eighteen">
-<meta property="og:description" content="Centos 7 安装记录 加载镜像，选择Install Centos Linux 7http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg  选择语言，建议选择Englishhttp://wx2.sinaimg.cn/large/0060lm7Tly1g38x7d3wsmj30l007btcf.jpg  新增swap和根分">
+<meta property="og:description" content="Centos 7 安装记录 加载镜像，选择Install Centos Linux 7  选择语言，建议选择English  分区、新增swap和根分区（根分区格式选择ext4）  选择最小化安装  修改密码  Reboot  进行登录    修改IP  12345678vi  /etc/sysconfig/network-scripts/ifcfg-*   BOOTPROTO=static#启用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-21T06:49:46.064Z">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7d3wsmj30l007btcf.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oid5dj316v0u0k5f.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7sayyxj316x0u07eu.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7sayyxj316x0u07eu.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7kxgsfj316w0u0k2d.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7negglj316x0u0wod.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oajgoj316h0u0ak4.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7ucycej31700u0gwj.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7p1v7sj31700u0qj1.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7y7qzuj316u0u0k75.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7ytlilj316q0u07i6.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7wvfv3j317h0u07du.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7xi8g9j31ni0u0agt.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7worglj31em0o843a.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7yi8ogj31o40u045n.jpg">
+<meta property="og:updated_time" content="2019-05-21T07:01:13.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装Centos">
-<meta name="twitter:description" content="Centos 7 安装记录 加载镜像，选择Install Centos Linux 7http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg  选择语言，建议选择Englishhttp://wx2.sinaimg.cn/large/0060lm7Tly1g38x7d3wsmj30l007btcf.jpg  新增swap和根分">
+<meta name="twitter:description" content="Centos 7 安装记录 加载镜像，选择Install Centos Linux 7  选择语言，建议选择English  分区、新增swap和根分区（根分区格式选择ext4）  选择最小化安装  修改密码  Reboot  进行登录    修改IP  12345678vi  /etc/sysconfig/network-scripts/ifcfg-*   BOOTPROTO=static#启用">
+<meta name="twitter:image" content="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg">
 
 
 
@@ -320,32 +337,28 @@
 
       
         <h3 id="Centos-7-安装记录"><a href="#Centos-7-安装记录" class="headerlink" title="Centos 7 安装记录"></a>Centos 7 安装记录</h3><ol>
-<li><p>加载镜像，选择<strong>Install Centos Linux 7</strong><br><a href="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg" target="_blank" rel="noopener">http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg</a></p>
+<li><p>加载镜像，选择<strong>Install Centos Linux 7</strong><br><img src="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7bzyyyj30jw06ywf7.jpg" alt="image"></p>
 </li>
-<li><p>选择语言，建议选择English<br><a href="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7d3wsmj30l007btcf.jpg" target="_blank" rel="noopener">http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7d3wsmj30l007btcf.jpg</a></p>
+<li><p>选择语言，建议选择English<br><img src="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7d3wsmj30l007btcf.jpg" alt="image"></p>
 </li>
-<li><p>新增swap和根分区（根分区格式选择ext4）<br><a href="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7kxgsfj316w0u0k2d.jpg" target="_blank" rel="noopener">http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7kxgsfj316w0u0k2d.jpg</a><br><a href="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7negglj316x0u0wod.jpg" target="_blank" rel="noopener">http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7negglj316x0u0wod.jpg</a><br><a href="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oajgoj316h0u0ak4.jpg" target="_blank" rel="noopener">http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oajgoj316h0u0ak4.jpg</a></p>
+<li><p>分区、新增swap和根分区（根分区格式选择ext4）<br><img src="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oid5dj316v0u0k5f.jpg" alt="image"><br><img src="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7sayyxj316x0u07eu.jpg" alt="image"><br><img src="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7sayyxj316x0u07eu.jpg" alt="image"><br><img src="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7kxgsfj316w0u0k2d.jpg" alt="image"><br><img src="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7negglj316x0u0wod.jpg" alt="image"><br><img src="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oajgoj316h0u0ak4.jpg" alt="image"><br><img src="http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7ucycej31700u0gwj.jpg" alt="image"></p>
 </li>
-<li><p>进行分区<br><a href="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7sayyxj316x0u07eu.jpg" target="_blank" rel="noopener">http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7sayyxj316x0u07eu.jpg</a><br><a href="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oid5dj316v0u0k5f.jpg" target="_blank" rel="noopener">http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7oid5dj316v0u0k5f.jpg</a><br><a href="http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7ucycej31700u0gwj.jpg" target="_blank" rel="noopener">http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7ucycej31700u0gwj.jpg</a></p>
+<li><p>选择最小化安装<br><img src="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7p1v7sj31700u0qj1.jpg" alt="image"><br><img src="http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7y7qzuj316u0u0k75.jpg" alt="image"></p>
 </li>
-</ol>
-<ol start="5">
-<li><p>选择最小化安装<br><a href="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7p1v7sj31700u0qj1.jpg" target="_blank" rel="noopener">http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7p1v7sj31700u0qj1.jpg</a><br><a href="http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7y7qzuj316u0u0k75.jpg" target="_blank" rel="noopener">http://wx4.sinaimg.cn/large/0060lm7Tly1g38x7y7qzuj316u0u0k75.jpg</a></p>
+<li><p>修改密码<br><img src="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7ytlilj316q0u07i6.jpg" alt="image"></p>
 </li>
-<li><p>修改密码<br><a href="http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7ytlilj316q0u07i6.jpg" target="_blank" rel="noopener">http://wx3.sinaimg.cn/large/0060lm7Tly1g38x7ytlilj316q0u07i6.jpg</a></p>
+<li><p>Reboot<br><img src="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7wvfv3j317h0u07du.jpg" alt="image"></p>
 </li>
-<li><p>Reboot<br><a href="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7wvfv3j317h0u07du.jpg" target="_blank" rel="noopener">http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7wvfv3j317h0u07du.jpg</a></p>
-</li>
-<li><p>进行登录<br><a href="http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7xi8g9j31ni0u0agt.jpg" target="_blank" rel="noopener">http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7xi8g9j31ni0u0agt.jpg</a></p>
+<li><p>进行登录<br><img src="http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7xi8g9j31ni0u0agt.jpg" alt="image"></p>
 </li>
 </ol>
-<ol start="9">
+<ol start="8">
 <li>修改IP</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vi  /etc/sysconfig/network-scripts/ifcfg-*</span><br><span class="line">   BOOTPROTO=static#启用静态IP地址</span><br><span class="line">　　ONBOOT=yes  #开启自动启用网络连接</span><br><span class="line">　　IPADDR=192.168.1.73   #设置网关</span><br><span class="line">　　GATEWAY=192.168.1.1</span><br><span class="line">　　NETMASK=255.255.255.0</span><br><span class="line">　　DNS1=114.114.114.114</span><br><span class="line">　　DNS2=8.8.8.8</span><br></pre></td></tr></table></figure>
-<p><a href="http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7worglj31em0o843a.jpg" target="_blank" rel="noopener">http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7worglj31em0o843a.jpg</a></p>
-<ol start="10">
-<li><p>重启网卡<br><a href="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7yi8ogj31o40u045n.jpg" target="_blank" rel="noopener">http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7yi8ogj31o40u045n.jpg</a></p>
+<p><img src="http://wx1.sinaimg.cn/large/0060lm7Tly1g38x7worglj31em0o843a.jpg" alt="image"></p>
+<ol start="9">
+<li><p>重启网卡<br><img src="http://wx2.sinaimg.cn/large/0060lm7Tly1g38x7yi8ogj31o40u045n.jpg" alt="image"></p>
 </li>
 <li><p>大功告成</p>
 </li>
